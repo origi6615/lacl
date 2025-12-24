@@ -6,7 +6,7 @@ from .ACIL import ACIL, ACILLearner
 from .DSAL import DSAL, DSALLearner
 from .CDSAL import CDSAL, CDSALLearner
 
-from .LACL1 import LACL1, LACL1Learner
+from .LACL import LACL, LACL
 from .GKEAL import GKEAL, GKEALLearner
 from .AEFOCL import AEFOCL, AEFOCLLearner
 from .AIR import AIRLearner, GeneralizedAIRLearner
@@ -27,8 +27,7 @@ __all__ = [
     "AEFOCL",
     "ACILLearner",
     "DSALLearner",
-     "CDSALLearner",
-    "LACL1Learner",
+    "LACLLearner",
     "GKEALLearner",
     "AEFOCLLearner",
     "AIRLearner",
