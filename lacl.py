@@ -28,7 +28,7 @@ class LACL(torch.nn.Module):
         super().__init__()
 
         if metric not in ["cosine", "euclidean"]:
-            raise ValueError(f"use 'cosine'or 'euclidean'")
+            raise ValueError(f"use'cosine'or 'euclidean'")
             
         factory_kwargs = {"device": device, "dtype": dtype}
         self.backbone = backbone
@@ -91,7 +91,7 @@ class LACL(torch.nn.Module):
         self.main_stream.fit(X_main, Y_main)
         self.main_stream.update()
 
-
+        # Previous label cleansing (PLC)
         Y_comp = Y_main - self.main_stream(X_main)
         Y_comp[:, :-increase_size] = 0
 
@@ -131,7 +131,7 @@ class LACLLearner(ACILLearner):
             self.gamma_comp,
             self.compensation_ratio,
             k=self.k,
-            metric=self.metric,  
+            metric=self.metric, 
             device=self.device,
             dtype=torch.double,
             linear=RecursiveLinear,
