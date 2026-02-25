@@ -1,4 +1,5 @@
-# Locally-AdaptiveCompensation-for-AnalyticClass-Incremental-Learning
+# Locally Adaptive Compensation for Analytic Class-Incremental Learning.
+
 
 python main.py LACL --dataset CIFAR-100 --base-ratio 0.5 --phases 5 \
 --data-root ~/dataset --IL-batch-size 4096 --num-workers 16 --backbone resnet32 \
